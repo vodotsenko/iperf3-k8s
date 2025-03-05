@@ -14,4 +14,6 @@ until $(kubectl get pod "${iperf3_client2}" -n iperf3 -o jsonpath='{.status.cont
 done
 
 iperf3_svc_ip=`kubectl get svc -n iperf3 iperf3-svc-2 --output jsonpath="{.status.loadBalancer.ingress[0].ip}"`
-kubectl exec -it ${iperf3_client} -n iperf3 -c iperf3 -- bash -c "iperf3 -c ${iperf3_svc_ip}"
+
+export iperf3_client iperf3_svc_ip
+/home/user/iperf3-scripts/nonistio/start_test_from_nonistio.sh
