@@ -1,1 +1,0 @@
-/home/user/iperf3-scripts/nonistio/start_test_from_nonistio.sh
