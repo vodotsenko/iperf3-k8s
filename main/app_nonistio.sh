@@ -23,7 +23,9 @@ echo intranode
 # iperf3 100m  256Mi /  300m 512Mi
 /home/user/iperf3-scripts/main/update_resources_step2.sh
 sleep 20
-#старт серверов
+#рестарт серверов
+/home/user/iperf3-scripts/istio/stop_srv_all.sh
+/home/user/iperf3-scripts/nonistio/stop_srv_all.sh
 /home/user/iperf3-scripts/istio/start_srv_all.sh
 /home/user/iperf3-scripts/nonistio/start_srv_all.sh
 
@@ -42,7 +44,9 @@ echo intranode
 # iperf3 100m  256Mi /  1500m 1024Mi
 /home/user/iperf3-scripts/main/update_resources_step3.sh
 sleep 20
-#старт серверов
+#рестарт серверов
+/home/user/iperf3-scripts/istio/stop_srv_all.sh
+/home/user/iperf3-scripts/nonistio/stop_srv_all.sh
 /home/user/iperf3-scripts/istio/start_srv_all.sh
 /home/user/iperf3-scripts/nonistio/start_srv_all.sh
 

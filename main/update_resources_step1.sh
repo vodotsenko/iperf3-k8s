@@ -16,7 +16,7 @@ kubectl patch deployment iperf3-deployment -n iperf3 --patch "$(cat $SCRIPTS_DIR
 kubectl patch deployment iperf3-deployment-2 -n iperf3 --patch "$(cat $SCRIPTS_DIR/resources_dp2_iperf3.yaml)"
 
 #cluster2
-kubectl config use-context admin@talos-proxmox-cluster &> /dev/null
+kubectl config use-context admin@talos-proxmox-cluster2 &> /dev/null
 
 #istio-deployment
   #sidecar
