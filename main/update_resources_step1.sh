@@ -1,4 +1,4 @@
-SCRIPTS_DIR=/home/user/iperf3-scripts/resources/step2
+SCRIPTS_DIR=/home/user/iperf3-scripts/resources/step1
 
 #cluster1
 kubectl config use-context admin@talos-proxmox-cluster
