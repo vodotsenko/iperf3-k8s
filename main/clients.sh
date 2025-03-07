@@ -1,5 +1,17 @@
 SCRIPTS_DIR=/home/user/iperf3-scripts
 
+# envoy 100m  128Mi / 200m 256Mi
+# iperf3 100m  128Mi /  100m 128Mi
+echo internode
+  echo source nonistio
+    echo destination nonistio
+      echo cluster1
+        $SCRIPTS_DIR/nonistio/cluster1/clients/start_client_to_nonistio_inter.sh
+
+
+
+
+
 
 echo internode
   echo source istio
