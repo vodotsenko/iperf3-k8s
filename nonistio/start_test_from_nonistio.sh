@@ -5,6 +5,12 @@ kubectl config use-context admin@talos-proxmox-$cluster
 start_test_1P="kubectl exec -it ${iperf3_client} -n iperf3 -c iperf3 -- bash -c \"iperf3 -c ${iperf3_svc_ip} -t 2\""
 start_test_10P="kubectl exec -it ${iperf3_client} -n iperf3 -c iperf3 -- bash -c \"iperf3 -c ${iperf3_svc_ip} -t 2 -P 2\""
 
+#удаляем cpu stressor
+kubectl config use-context admin@talos-proxmox-cluster
+kubectl delete -f /home/user/cpu-stressor/cpu-stressor-deploy.yaml
+kubectl config use-context admin@talos-proxmox-cluster2
+kubectl delete -f /home/user/cpu-stressor/cpu-stressor-deploy.yaml
+
 echo "без внешней нагрузки"
 eval $start_test_1P
 
@@ -20,6 +26,9 @@ echo "нагрузка на кластер 95%"
 eval $start_test_1P
 
 #удаляем cpu stressor
+kubectl config use-context admin@talos-proxmox-cluster
+kubectl delete -f /home/user/cpu-stressor/cpu-stressor-deploy.yaml
+kubectl config use-context admin@talos-proxmox-cluster2
 kubectl delete -f /home/user/cpu-stressor/cpu-stressor-deploy.yaml
 
 echo "без внешней нагрузки"
