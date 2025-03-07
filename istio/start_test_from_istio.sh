@@ -18,7 +18,7 @@ eval $start_test_1P
 echo "нагрузка на кластер 95%"
 /home/user/iperf3-scripts/main/run_cpu_stressor_95.sh
 
-eval $start_test_10P
+eval $start_test_1P
 
 #удаляем cpu stressor
 kubectl delete -f /home/user/cpu-stressor/cpu-stressor-deploy.yaml
