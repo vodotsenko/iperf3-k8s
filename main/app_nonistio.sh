@@ -18,6 +18,7 @@ echo intranode
 
 # iperf3 100m  256Mi /  300m 512Mi
 /home/user/iperf3-scripts/main/update_resources_step2.sh
+sleep 30
 
 echo internode
   echo source nonistio
@@ -33,6 +34,7 @@ echo intranode
 
 # iperf3 100m  256Mi /  1500m 1024Mi
 /home/user/iperf3-scripts/main/update_resources_step3.sh
+sleep 30
 
 echo internode
   echo source nonistio
