@@ -3,7 +3,7 @@
 
 kubectl config use-context admin@talos-proxmox-$cluster
 start_test_1P="kubectl exec -it ${iperf3_client} -n iperf3 -c iperf3 -- bash -c \"iperf3 -c ${iperf3_svc_ip} -t 2\""
-start_test_10P="kubectl exec -it ${iperf3_client} -n iperf3 -c iperf3 -- bash -c \"iperf3 -c ${iperf3_svc_ip} -t 2 -P 10\""
+start_test_10P="kubectl exec -it ${iperf3_client} -n iperf3 -c iperf3 -- bash -c \"iperf3 -c ${iperf3_svc_ip} -t 2 -P 2\""
 export $cluster
 
 echo "без внешней нагрузки"
