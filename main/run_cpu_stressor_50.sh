@@ -1,5 +1,4 @@
 kubectl config use-context admin@talos-proxmox-$cluster
-echo "нагрузка на кластер 50%"
 kubectl apply -f /home/user/cpu-stressor/cpu-stressor-deploy.yaml
 sleep 4
 kubectl rollout status deployment/cpu-stressor-deployment -n iperf3

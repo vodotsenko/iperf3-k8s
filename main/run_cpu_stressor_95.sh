@@ -1,5 +1,4 @@
 kubectl config use-context admin@talos-proxmox-$cluster
-echo "нагрузка на кластер 95%"
 kubectl patch deployment cpu-stressor-deployment -n iperf3 --patch "$(cat /home/user/cpu-stressor/cs-patch-95proc.yaml)"
 sleep 4
 kubectl rollout status deployment/cpu-stressor-deployment -n iperf3

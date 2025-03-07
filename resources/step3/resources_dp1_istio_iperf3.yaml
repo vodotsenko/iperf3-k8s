@@ -5,8 +5,8 @@ spec:
         - name: iperf3-istio
           resources:
             limits:
-              cpu: 500m
+              cpu: 300m
               memory: 512Mi
             requests:
-              cpu: 200m
+              cpu: 100m
               memory: 256Mi

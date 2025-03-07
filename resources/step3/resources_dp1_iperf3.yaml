@@ -5,7 +5,7 @@ spec:
         - name: iperf3
           resources:
             limits:
-              cpu: 200m
+              cpu: 300m
               memory: 512Mi
             requests:
               cpu: 100m

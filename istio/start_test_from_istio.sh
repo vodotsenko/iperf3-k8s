@@ -9,7 +9,7 @@ export $cluster
 echo "без внешней нагрузки"
 eval $start_test_1P
 
-echo "нагрузка на кластер 95%"
+echo "нагрузка на кластер 50%"
 /home/user/iperf3-scripts/main/run_cpu_stressor_50.sh
 
 sleep 3
@@ -26,7 +26,7 @@ kubectl delete -f /home/user/cpu-stressor/cpu-stressor-deploy.yaml
 echo "без внешней нагрузки"
 eval $start_test_10P
 
-echo "нагрузка на кластер 95%"
+echo "нагрузка на кластер 50%"
 /home/user/iperf3-scripts/main/run_cpu_stressor_50.sh
 
 sleep 3
