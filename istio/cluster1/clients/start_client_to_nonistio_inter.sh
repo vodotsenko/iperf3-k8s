@@ -1,6 +1,6 @@
 #запустить клиента (istio)
 cluster="cluster"
-kubectl config use-context admin@talos-proxmox-$cluster
+kubectl config use-context admin@talos-proxmox-$cluster &> /dev/null
 iperf3_client=`kubectl get pod -n default -l app=iperf3-istio -o jsonpath="{.items[0].metadata.name}"`
 
 #старт второго пода или проверка, что под запущен

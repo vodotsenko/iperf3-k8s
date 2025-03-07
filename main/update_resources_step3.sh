@@ -1,7 +1,7 @@
 SCRIPTS_DIR=/home/user/iperf3-scripts/resources/step3
 
 #cluster1
-kubectl config use-context admin@talos-proxmox-cluster
+kubectl config use-context admin@talos-proxmox-cluster &> /dev/null
 
 #istio-deployment
   #sidecar
@@ -16,7 +16,7 @@ kubectl patch deployment iperf3-deployment -n iperf3 --patch "$(cat $SCRIPTS_DIR
 kubectl patch deployment iperf3-deployment-2 -n iperf3 --patch "$(cat $SCRIPTS_DIR/resources_dp2_iperf3.yaml)"
 
 #cluster2
-kubectl config use-context admin@talos-proxmox-cluster2
+kubectl config use-context admin@talos-proxmox-cluster &> /dev/null
 
 #istio-deployment
   #sidecar

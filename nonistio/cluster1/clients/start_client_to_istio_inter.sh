@@ -1,6 +1,6 @@
 #запустить клиента (noistio)
 cluster="cluster"
-kubectl config use-context admin@talos-proxmox-$cluster
+kubectl config use-context admin@talos-proxmox-$cluster &> /dev/null
 iperf3_client=`kubectl get pod -n iperf3 -l app=iperf3 -o jsonpath="{.items[0].metadata.name}"`
 iperf3_svc_ip=`kubectl get svc -n istio-system istio-ingressgateway --output jsonpath="{.status.loadBalancer.ingress[0].ip}"`
 
